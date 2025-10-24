@@ -10,13 +10,14 @@ case "$1" in
 		docker stop qrcode_gen 2>/dev/null || true
 		docker container prune -f
 		docker image prune -f
+		docker build -t qrcode_gen . --no-cache
 		echo "Updated successfully"
 		./qrcode-generator.sh start
 		
 		;;
 	start)
 		echo "Starting..."
-		docker start qrcode_gen 2>/dev/null || docker run -d --name qrcode_gen qrcode_gen
+		docker docker run -d --name qrcode_gen -p 3000:3000 qrcode_gen
 		echo "Started."
 		;;
 	stop)
@@ -27,8 +28,8 @@ case "$1" in
 	install)
 		echo "Installing QR Code Generator..."
 		docker build -t qrcode_gen .
-		docker run -d --name qrcode_gen -p 3000:3000 qrcode_gen
 		echo "Installed successfully"
+		./qrcode-generator.sh start
 		;;
 	*)
 		echo "Usage: $0 {start|stop|install|update}"
