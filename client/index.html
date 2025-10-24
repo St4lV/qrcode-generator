@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free and open source QR code generator. No ads, no annoyances, no redirections. Generate your QR Code now !"> 
+    <meta name="google-site-verification" content="Mp_gdFv1aJt88TcrxMiLKiUerK8cRrwrPYS5-q4VJzc" />
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <header>
+        <img src="/favicon.ico" alt="Logo">
+        <h1>QR Code generator</h1>
+    </header>
+    <hr>
+    <main>
+        <center>
+            <fieldset id="input-form">
+                <h2>URL to encode :</h2>
+                <hr>
+                <input id="url-input" name="url" type="text" placeholder="https://my.url-example.com">
+
+                <button id="send-btn">Generate QR Code</button>
+                <hr>
+                <p id="display-log">Enter your url</p>
+                <hr>
+            </fieldset>
+        </center>
+        <hr>
+        <div id="returned-img"></div>
+    </main>
+    
+    <footer>
+        <hr>
+        <div id="footer-comp-holder">
+            <div class="footer-comp">
+                <h2>Free QR Code generator</h2>
+                <hr>
+                <p>This simple service let's you generate QR codes for free.
+                <br>Open source, no ads, no annoyances, no redirections.
+                <br><span class="bold">Right click > Save Image as... > YourQRCode.png</span>
+                <br>and that's all !
+            </p>
+            </div>
+            <div class="footer-comp">
+                <h2>Site made by St4lv</h2>
+                <hr>
+                <ul>
+                    <li>
+                        <a href="https://github.com/St4lV/qrcode-generator" target="_blank">Github repository</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/St4lV" target="_blank">Github profile</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+    <script src="/index.js" defer></script>
+</body>
+</html>

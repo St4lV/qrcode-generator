@@ -9,24 +9,38 @@ app.listen(port, async () => {
     console.log(`Server is running on port ${port}.`);
 });
 
+///// CLIENT /////
+
 app.get("/", async (req, res) => {
-    res.sendFile('index.html', {root: __dirname});
+    res.sendFile('/client/index.html', {root: __dirname});
 });
 
+app.get("/index.js", async (req, res) => {
+    res.sendFile('/client/index.js', {root: __dirname});
+});
+
+app.get("/index.css", async (req, res) => {
+    res.sendFile('/client/index.css', {root: __dirname});
+});
+
+///// PUBLIC /////
+
 app.get("/favicon.ico", async (req, res) => {
-    res.sendFile('favicon.ico', {root: __dirname});
+    res.sendFile('/public/favicon.ico', {root: __dirname});
 });
 
 app.get("/sitemap.xml", async (req,res) =>{
-    res.sendFile('sitemap.xml', {root: __dirname})
+    res.sendFile('/public/sitemap.xml', {root: __dirname})
 });
 
 app.get("/robots.txt", async (req,res) =>{
-    res.sendFile('robots.txt', {root: __dirname})
+    res.sendFile('/public/robots.txt', {root: __dirname})
 });
 
+///// API /////
+
 app.post("/generate-qr-code", async (req, res) => {
-    const url = req.body.url;//"https://linktr.ee/djfolai"
+    const url = req.body.url;
     console.log(url);
     
     try {
