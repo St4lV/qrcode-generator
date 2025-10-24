@@ -17,7 +17,7 @@ case "$1" in
 		;;
 	start)
 		echo "Starting..."
-		docker docker run -d --name qrcode_gen -p 3000:3000 qrcode_gen
+		docker run -d --name qrcode_gen -p 3000:3000 qrcode_gen
 		echo "Started."
 		;;
 	stop)
