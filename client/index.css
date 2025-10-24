@@ -11,96 +11,207 @@ body{
     color: white;
 }
 
-header{
-    display: flex;
-    align-items: center;
-    background-color: rgb(20,20,20);
-    color: white;
-    gap:10px;
-    padding-left: 10px;
-}
-header img{
-    width: 40px;
-    height: 40px;
-}
-fieldset{
-    display: flex;
-    border: none;
-}
-#input-form{
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 20px;
-    width: 300px;
-    height: 250px;
-    background-color: rgb(20,20,20);
-    margin: 30px 0px;
-    border-radius: 5%;
-    justify-content: space-between;
-    padding: 20px 0px;
+@media (min-width: 958px) {
+
+    header{
+        display: flex;
+        align-items: center;
+        background-color: rgb(20,20,20);
+        color: white;
+        gap:10px;
+        padding-left: 10px;
+    }
+    header img{
+        width: 40px;
+        height: 40px;
+    }
+    fieldset{
+        display: flex;
+        border: none;
+    }
+    #input-form{
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 20px;
+        width: 300px;
+        height: 250px;
+        background-color: rgb(20,20,20);
+        margin: 30px 0px;
+        border-radius: 5%;
+        justify-content: space-between;
+        padding: 20px 0px;
+    }
+
+    #input-form hr{
+        color: white;
+        width: 95%;
+    }
+
+    #url-input{
+        width: 90%;
+        margin: 5px 0px;
+        text-align: center;
+    }
+    .returned-img-comp{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        max-width: 300px;
+        min-width: 300px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        background-color: rgb(20,20,20);
+        padding: 20px;
+        border-radius: 5%;
+    }
+    .returned-img-comp img{
+        max-width: 256px;
+        min-width: 256px;
+        border-radius: 5%;
+    }
+    #returned-img{
+        display: flex;
+        overflow-x: scroll ;
+        max-height: 300px;
+        gap: 10px;
+    }
+    a{
+        color: white;
+    }
+    #send-btn{
+        padding: 10px 5px;
+        color: white;
+        background-color: rgb(63,63,63);
+        border-radius: 5%;
+        font-size: large;
+    }
+    footer{
+        width: 100%;
+        background-color: rgb(20,20,20);
+        height: 150px;
+        position: fixed;
+        bottom: 0px;
+    }
+    #footer-comp-holder{
+        display: flex;
+        padding: 0px 10px;
+        gap : 15px;
+        justify-content: space-around;
+        text-align: center;
+    }
+    #footer-comp-holder li{
+        margin: 0px 15px;
+    }
+    .bold{
+        font-weight: 700;
+    }
+    .footer-hr-mobile{
+        display: none;
+    }
+    .footer-list li{
+        padding: 5px 0px;
+    }
 }
 
-#input-form hr{
-    color: white;
-    width: 95%;
-}
+@media (max-width: 957px) {
+    header{
+        display: flex;
+        align-items: center;
+        background-color: rgb(20,20,20);
+        color: white;
+        gap:10px;
+        padding-left: 10px;
+    }
+    header img{
+        width: 40px;
+        height: 40px;
+    }
+    fieldset{
+        display: flex;
+        border: none;
+    }
+    #input-form{
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 20px;
+        width: 300px;
+        height: 250px;
+        background-color: rgb(20,20,20);
+        margin: 30px 0px;
+        border-radius: 5%;
+        justify-content: space-between;
+        padding: 20px 0px;
+    }
 
-#url-input{
-    width: 90%;
-    margin: 5px 0px;
-    text-align: center;
-}
-.returned-img-comp{
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    max-width: 300px;
-    min-width: 300px;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    background-color: rgb(20,20,20);
-    padding: 20px;
-    border-radius: 5%;
-}
-.returned-img-comp img{
-    max-width: 256px;
-    min-width: 256px;
-    border-radius: 5%;
-}
-#returned-img{
-    display: flex;
-    overflow-x: scroll ;
-    max-height: 300px;
-    gap: 10px;
-}
-a{
-    color: white;
-}
-#send-btn{
-    padding: 10px 5px;
-    color: white;
-    background-color: rgb(63,63,63);
-    border-radius: 5%;
-    font-size: large;
-}
-footer{
-    width: 100%;
-    background-color: rgb(20,20,20);
-    height: 150px;
-    position: fixed;
-    bottom: 0px;
-}
-#footer-comp-holder{
-    display: flex;
-    padding: 0px 10px;
-    gap : 15px;
-    justify-content: space-around;
-    text-align: center;
-}
-#footer-comp-holder li{
-    margin: 0px 15px;
-}
-.bold{
-    font-weight: 700;
+    #input-form hr{
+        color: white;
+        width: 95%;
+    }
+    #url-input{
+        width: 90%;
+        margin: 5px 0px;
+        text-align: center;
+    }
+    .returned-img-comp{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        max-width: 80%;
+        min-width: 80%;
+        min-height: 200px;
+        background-color: rgb(20,20,20);
+        padding: 20px;
+        border-radius: 5%;
+    }
+    .returned-img-comp img{
+        max-width: 128px;
+        min-width: 128px;
+        border-radius: 5%;
+    }
+    #returned-img{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5vh;
+        margin: 5vh 0px;
+    }
+    a{
+        color: white;
+    }
+    #send-btn{
+        padding: 10px 5px;
+        color: white;
+        background-color: rgb(63,63,63);
+        border-radius: 2%;
+        font-size: large;
+    }
+    footer{
+        width: 100%;
+        background-color: rgb(20,20,20);
+    }
+    #footer-comp-holder{
+        display: flex;
+        flex-direction: column;
+        padding: 10px 10px;
+        gap : 15px;
+        justify-content: space-around;
+        text-align: center;
+    }
+    #footer-comp-holder li{
+        margin: 0px 15px;
+    }
+    .bold{
+        font-weight: 700;
+    }
+    .footer-hr-pc{
+        display: none;
+    }
+    .footer-list{
+        list-style: none;
+    }
+    .footer-list li{
+        padding: 10px 0px;
+    }
 }

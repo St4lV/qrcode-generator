@@ -41,13 +41,10 @@ app.get("/robots.txt", async (req,res) =>{
 
 app.post("/generate-qr-code", async (req, res) => {
     const url = req.body.url;
-    console.log(url);
-    
     try {
         const result = await genQRCode(url);
         return res.status(200).type("image/png").send(result);
     } catch (error) {
-        console.error(error);
         res.status(500).json({ error: "Failed to generate QR code" });
     }
 });
