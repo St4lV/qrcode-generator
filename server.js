@@ -18,7 +18,11 @@ app.get("/favicon.ico", async (req, res) => {
 });
 
 app.get("/sitemap.xml", async (req,res) =>{
-    
+    res.sendFile('sitemap.xml', {root: __dirname})
+});
+
+app.get("/robots.txt", async (req,res) =>{
+    res.sendFile('robots.txt', {root: __dirname})
 });
 
 app.post("/generate-qr-code", async (req, res) => {
